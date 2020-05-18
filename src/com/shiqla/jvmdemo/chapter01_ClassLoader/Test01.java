@@ -1,4 +1,4 @@
-package com.shiqla.jvmdemo;
+package com.shiqla.jvmdemo.chapter01_ClassLoader;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -22,21 +22,19 @@ package com.shiqla.jvmdemo;
  * ━━━━━━感觉萌萌哒━━━━━━
  * Desc
  * Auth c5285333
- * Date 2020-05-17
+ * Date 2020-05-18
  */
-public class JvmDemo
+public class Test01
 {
-    private int i = 0;
-    private String name ;
-    private String shi= "shi";
-    private String wen = "ling";
 
-    public void test(){
-        this.name = "shiqinlong";
+    public Test01(String name){
+        init(name);
     }
 
 
-    public static void main(String[] args){
-        System.out.println("test");
+    void init(String name){
+        System.out.println("name");
     }
+
+
 }
