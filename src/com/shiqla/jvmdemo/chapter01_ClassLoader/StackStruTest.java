@@ -23,6 +23,10 @@ public class StackStruTest
     private static int num = 10;
 
     public static void main(String[] args){
+
+    }
+
+    public void typesOfClassLoader(){
         ClassLoader appClassLoader = ClassLoader.getSystemClassLoader();
         System.out.println(appClassLoader);
 
@@ -41,6 +45,11 @@ public class StackStruTest
         for (URL url : urls) {
             System.out.println(url);
         }
+    }
+
+    public void getClassLoader(){
+
+        
 
     }
 }
