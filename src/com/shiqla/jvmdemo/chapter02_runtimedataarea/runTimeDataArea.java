@@ -1,4 +1,4 @@
-package com.shiqla.jvmdemo.runtimedataarea;
+package com.shiqla.jvmdemo.chapter02_runtimedataarea;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -20,13 +20,13 @@ package com.shiqla.jvmdemo.runtimedataarea;
  * 　　　　　┃┫┫　┃┫┫
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
- * Desc
+ * Desc 运行时数据区
  * Auth Administrator
  * Date 2020/5/18 0018
  */
 public class runTimeDataArea {
 
     public static void main(String[] args) {
-        
+
     }
 }
