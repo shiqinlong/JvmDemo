@@ -32,3 +32,4 @@ build/
 *.cmd
 .mvn
 mvnw
+out/
