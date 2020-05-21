@@ -28,7 +28,10 @@ import java.util.Date;
  */
 public class LocalVariables
 {
+
+
     public void test(String str){
+        String name = "shiqinlong";
         int i=0;
         int j=30;
         Date date = new Date();
