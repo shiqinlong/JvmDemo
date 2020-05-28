@@ -39,5 +39,11 @@ public class LocalVariables
 
     public static void main(String[] args){
 
+        String str1 = new String();
+
+        String str2 = new String();
+
+        int[] intarr = new int[1024*1024*10];
+
     }
 }
