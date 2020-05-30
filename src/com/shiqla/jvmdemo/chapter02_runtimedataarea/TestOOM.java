@@ -32,7 +32,7 @@ public class TestOOM {
 
     public static void main(String[] args) throws InterruptedException {
         byte[] buffer;
-
+        byte[]  buffer2;
         List list = new LinkedList();
 
         for(int i=0;i<1000;i++){
@@ -42,6 +42,10 @@ public class TestOOM {
 //            if( i%5 == 0){
 //                ((LinkedList) list).removeFirst();
 //            }
+
+            if(i == 5){
+                buffer2 = new byte[2014*1024*100];
+            }
         }
     }
 }

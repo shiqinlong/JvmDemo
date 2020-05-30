@@ -17,7 +17,13 @@
             几乎所有的对象都是在eden 被创建的,绝大部分的对象销毁也是在eden 区发生.
             -Xmn 设置新生代的大小
         old区：
+            对于经过GC后的eden区，还是放不下的超大对象，会直接存放在old区
+            old区会执行major GC,如果执行之后内存还是不足则直接抛出oom异常
+            old区的major GC 效率比young 区的 minor GC 低10倍以上.
         元空间（metaspace）:
+        
+        full GC, 会回收young，old，metaspace,避免去执行，非常影响性能,
+        System.GC 会建议系统去执行full gc.
         
    #### JAVA 虚拟机栈 
        虚拟机启动参数 -Xss（stack size ,栈大小） 设置最大栈大小:-Xss1024K
