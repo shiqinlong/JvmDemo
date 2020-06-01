@@ -1,8 +1,8 @@
 package com.shiqla.jvmdemo.chapter02_runtimedataarea;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -26,28 +26,21 @@ import java.util.List;
  * ━━━━━━感觉萌萌哒━━━━━━
  * Desc ${DESC}
  * Auth c5285333
- * Date 2020-05-29
+ * Date 2020-06-01
  */
-public class TestOOM {
+public class ClassLoaderTest {
 
-    public static String name = "shi";
+    private final String str = "shiqola";
 
-    public static void main(String[] args) throws InterruptedException {
-        byte[] buffer;
-        byte[]  buffer2;
-        List list = new LinkedList();
+    public void test(){
 
-        for(int i=0;i<1000;i++){
-            buffer = new byte[1024*1024*5];
-            list.add(buffer);
-            Thread.sleep(1000*4);
-//            if( i%5 == 0){
-//                ((LinkedList) list).removeFirst();
-//            }
 
-            if(i == 5){
-                buffer2 = new byte[2014*1024*100];
-            }
-        }
+        List list = new ArrayList();
+
+        list.add("shi");
+        list.add("qin");
+
+        Stream stream = list.stream();
+
     }
 }
