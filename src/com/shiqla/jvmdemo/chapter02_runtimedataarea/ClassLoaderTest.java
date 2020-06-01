@@ -43,4 +43,8 @@ public class ClassLoaderTest {
         Stream stream = list.stream();
 
     }
+    
+    public static void main(String[] args){
+        ClassLoaderTest.class.getClassLoader();
+    }
 }
