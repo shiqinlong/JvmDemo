@@ -1,4 +1,7 @@
-package com.shiqla.jvmdemo.chapter02_runtimedataarea;
+package com.shiqla.jvmdemo.chapter02_runtimeDataarea;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -20,13 +23,32 @@ package com.shiqla.jvmdemo.chapter02_runtimedataarea;
  * 　　　　　┃┫┫　┃┫┫
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
- * Desc 运行时数据区
- * Auth Administrator
- * Date 2020/5/18 0018
+ * Desc ${DESC}
+ * Auth c5285333
+ * Date 2020-05-29
  */
-public class runTimeDataArea {
+public class TestOOM {
 
-    public static void main(String[] args) {
+    public static String name = "shi";
 
+    public static void main(String[] args) throws InterruptedException {
+        byte[] buffer;
+        byte[]  buffer2;
+        List list = new LinkedList();
+
+        for(int i=0;i<1000;i++){
+            buffer = new byte[1024*1024*5];
+            list.add(buffer);
+            Thread.sleep(1000*4);
+//            if( i%5 == 0){
+//                ((LinkedList) list).removeFirst();
+//            }
+
+            if(i == 5){
+                buffer2 = new byte[2014*1024*100];
+            }
+        }
     }
+
+
 }

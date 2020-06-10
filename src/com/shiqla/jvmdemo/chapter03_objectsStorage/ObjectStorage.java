@@ -1,4 +1,4 @@
-package com.shiqla.jvmdemo.chapter03_objectsstorage;
+package com.shiqla.jvmdemo.chapter03_objectsStorage;
 
 /**
  * Desc ${DESC}

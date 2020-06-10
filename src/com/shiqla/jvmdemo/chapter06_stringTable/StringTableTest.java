@@ -1,7 +1,6 @@
-package com.shiqla.jvmdemo.chapter06_stringtable;
+package com.shiqla.jvmdemo.chapter06_stringTable;
 
 import org.junit.Test;
-import sun.jvm.hotspot.memory.StringTable;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -40,10 +39,41 @@ public class StringTableTest {
 
 
     @Test
+    public void test07(){
+
+        for (int i = 0; i< 10000;i++){
+            String.valueOf(i).intern();
+        }
+    }
+
+    public void test06(){
+        String s = new String("a") + new String("b");
+
+
+        String s2 = s.intern(); //把s 对象的地址放入池中，并返回s的地址返回给s2
+
+
+        System.out.println(s2 == "ab");// true
+        System.out.println(s == "ab");//true
+    }
+
     public void test05(){
 
-       String str = new String("asdfasdfaf");
-       str.intern();
+        String s = new String("1");
+        s.intern();
+
+        String s2 = "1";
+        System.out.println(s == s2);
+
+        String str1 = new String("ab") + new String("cd");
+        System.out.println(str1.hashCode());
+        String str2 = str1;
+        str1.intern();
+        String str3 = "abcd";
+        System.out.println(str1.hashCode());
+        System.out.println(str1 == str2);
+
+        System.out.println(str1 == str3);
 
     }
 

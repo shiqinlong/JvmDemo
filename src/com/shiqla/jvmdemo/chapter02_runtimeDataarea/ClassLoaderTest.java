@@ -1,6 +1,8 @@
-package com.shiqla.jvmdemo.chapter02_runtimedataarea;
+package com.shiqla.jvmdemo.chapter02_runtimeDataarea;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -22,28 +24,27 @@ import java.util.Date;
  * 　　　　　┃┫┫　┃┫┫
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
- * Desc
+ * Desc ${DESC}
  * Auth c5285333
- * Date 2020-05-20
+ * Date 2020-06-01
  */
-public class LocalVariables
-{
+public class ClassLoaderTest {
+
+    private final String str = "shiqola";
+
+    public void test(){
 
 
-    public void test(String str){
-        String name = "shiqinlong";
-        int i=0;
-        int j=30;
-        Date date = new Date();
+        List list = new ArrayList();
+
+        list.add("shi");
+        list.add("qin");
+
+        Stream stream = list.stream();
+
     }
-
+    
     public static void main(String[] args){
-
-        String str1 = new String();
-
-        String str2 = new String();
-
-        int[] intarr = new int[1024*1024*10];
-
+        ClassLoaderTest.class.getClassLoader();
     }
 }

@@ -1,8 +1,4 @@
-package com.shiqla.jvmdemo.chapter02_runtimedataarea;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+package com.shiqla.jvmdemo.chapter05_executionEngine;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -26,30 +22,22 @@ import java.util.List;
  * ━━━━━━感觉萌萌哒━━━━━━
  * Desc ${DESC}
  * Auth c5285333
- * Date 2020-05-29
+ * Date 2020-06-02
  */
-public class TestOOM {
+public class ExecutionEngineTest {
 
     public static String name = "shi";
 
-    public static void main(String[] args) throws InterruptedException {
-        byte[] buffer;
-        byte[]  buffer2;
-        List list = new LinkedList();
-
-        for(int i=0;i<1000;i++){
-            buffer = new byte[1024*1024*5];
-            list.add(buffer);
-            Thread.sleep(1000*4);
-//            if( i%5 == 0){
-//                ((LinkedList) list).removeFirst();
-//            }
-
-            if(i == 5){
-                buffer2 = new byte[2014*1024*100];
-            }
-        }
+    static{
+        System.out.println("static shiqla");
     }
 
+    public static void main(String[] args){
+        int i = 0;
+        System.out.println(i);
+    }
 
+    public void test(){
+        System.out.println("test");
+    }
 }

@@ -1,4 +1,4 @@
-package com.shiqla.jvmdemo.chapter02_runtimedataarea;
+package com.shiqla.jvmdemo.chapter02_runtimeDataarea;
 
 /**
  * Desc

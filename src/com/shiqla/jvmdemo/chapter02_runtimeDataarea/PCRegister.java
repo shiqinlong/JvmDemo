@@ -1,8 +1,4 @@
-package com.shiqla.jvmdemo.chapter02_runtimedataarea;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
+package com.shiqla.jvmdemo.chapter02_runtimeDataarea;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -24,27 +20,17 @@ import java.util.stream.Stream;
  * 　　　　　┃┫┫　┃┫┫
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
- * Desc ${DESC}
- * Auth c5285333
- * Date 2020-06-01
+ * Desc
+ * Auth Administrator
+ * Date 2020/5/18 0018
  */
-public class ClassLoaderTest {
+public class PCRegister {
 
-    private final String str = "shiqola";
+    public static void main(String[] args) {
+        int i = 20;
+        int j = 10;
+        int c = 30;
 
-    public void test(){
-
-
-        List list = new ArrayList();
-
-        list.add("shi");
-        list.add("qin");
-
-        Stream stream = list.stream();
-
-    }
-    
-    public static void main(String[] args){
-        ClassLoaderTest.class.getClassLoader();
+        String str = "shiq";
     }
 }

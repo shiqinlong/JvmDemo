@@ -1,4 +1,4 @@
-package com.shiqla.jvmdemo.chapter05_executionengine;
+package com.shiqla.jvmdemo.chapter02_runtimeDataarea;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -20,24 +20,13 @@ package com.shiqla.jvmdemo.chapter05_executionengine;
  * 　　　　　┃┫┫　┃┫┫
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
- * Desc ${DESC}
- * Auth c5285333
- * Date 2020-06-02
+ * Desc 运行时数据区
+ * Auth Administrator
+ * Date 2020/5/18 0018
  */
-public class ExecutionEngineTest {
+public class runTimeDataArea {
 
-    public static String name = "shi";
+    public static void main(String[] args) {
 
-    static{
-        System.out.println("static shiqla");
-    }
-
-    public static void main(String[] args){
-        int i = 0;
-        System.out.println(i);
-    }
-
-    public void test(){
-        System.out.println("test");
     }
 }

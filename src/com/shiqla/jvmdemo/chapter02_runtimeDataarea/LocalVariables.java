@@ -1,4 +1,6 @@
-package com.shiqla.jvmdemo.chapter02_runtimedataarea;
+package com.shiqla.jvmdemo.chapter02_runtimeDataarea;
+
+import java.util.Date;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -21,16 +23,27 @@ package com.shiqla.jvmdemo.chapter02_runtimedataarea;
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━感觉萌萌哒━━━━━━
  * Desc
- * Auth Administrator
- * Date 2020/5/18 0018
+ * Auth c5285333
+ * Date 2020-05-20
  */
-public class PCRegister {
+public class LocalVariables
+{
 
-    public static void main(String[] args) {
-        int i = 20;
-        int j = 10;
-        int c = 30;
 
-        String str = "shiq";
+    public void test(String str){
+        String name = "shiqinlong";
+        int i=0;
+        int j=30;
+        Date date = new Date();
+    }
+
+    public static void main(String[] args){
+
+        String str1 = new String();
+
+        String str2 = new String();
+
+        int[] intarr = new int[1024*1024*10];
+
     }
 }
