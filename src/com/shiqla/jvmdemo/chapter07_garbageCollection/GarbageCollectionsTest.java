@@ -21,7 +21,7 @@ public class GarbageCollectionsTest {
 
 
     @Test
-    public void softReference_test_02(){
+    public void softReference_test_02() throws InterruptedException {
 
 
 //        // create a new soft reference object;
@@ -33,6 +33,10 @@ public class GarbageCollectionsTest {
 //        System.out.println(softReference.get().length);
         System.out.println(GarbageCollectionsTest.class.getClassLoader());
         System.out.println(String.class.getClassLoader());
+
+        System.out.println(Runtime.getRuntime().maxMemory()/1024/1024/1024);
+
+        Thread.sleep(1000*10000);
     }
 
 
