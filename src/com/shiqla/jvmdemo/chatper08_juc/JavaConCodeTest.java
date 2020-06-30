@@ -2,10 +2,13 @@ package com.shiqla.jvmdemo.chatper08_juc;
 
 import org.junit.Test;
 
+import javax.sound.midi.Soundbank;
+import java.util.ArrayList;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.stream.Stream;
 
 /**
  * Desc ${DESC}
@@ -16,8 +19,101 @@ public class JavaConCodeTest {
 
     public ReentrantLock reentrantLock = new ReentrantLock();
 
+    public  AtomicInteger atomicInteger  = new AtomicInteger(0);
+
+
+    public volatile int num = 0;
+
+
+
+
+
+
 
     @Test
+    public void test_06(){
+        int i=0;
+        int j=0;
+
+        i=20;
+        j=30;
+        i=i+10;
+        j=j+30;
+
+        Stream stream =  new ArrayList<>().stream();
+        stream.count();
+
+    }
+
+
+
+    public void test_05() {
+
+        for (int i = 0; i < 4; i++) {
+            Thread thread = new Thread(() -> {
+                for (int j = 0; j < 100000; j++) {
+                    synchronized ("lock") {
+                       ++num;
+                    }
+                }
+            });
+            thread.start();
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println(num);
+    }
+
+
+    public void test_04(){
+        synchronized ("lock"){
+
+            try {
+                new Object().wait();
+
+                new Object().notify();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            test_01();
+            test_02();
+        }
+    }
+
+
+    public synchronized  void test_01(){}
+
+    public synchronized void test_02(){}
+
+
+    public void test03(){
+
+        Runnable runnable = () -> {
+            System.out.println("ni hao");
+        };
+
+        FutureTask<String> futureTask = new FutureTask<>(()->{
+            System.out.println("nihao");
+            return "nihao";
+        });
+
+        new Thread(futureTask).start();
+
+        try {
+            System.out.println(futureTask.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        runnable.run();
+    }
+
+
     public void print_test(){
         Lock lock = new ReentrantLock(true);
 
