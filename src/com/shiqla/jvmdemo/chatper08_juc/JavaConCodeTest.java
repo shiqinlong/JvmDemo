@@ -22,15 +22,23 @@ public class JavaConCodeTest {
     public  AtomicInteger atomicInteger  = new AtomicInteger(0);
 
 
+    public static void main(String[] args){
+        new JavaConCodeTest().reentrantlock_01();
+
+    }
+
+
+    public synchronized void reentrantlock_01(){
+        System.out.println("method01");
+        this.renentrantlock_02();
+    }
+
+    public synchronized void renentrantlock_02(){
+        System.out.println("method02");
+    }
+
     public volatile int num = 0;
 
-
-
-
-
-
-
-    @Test
     public void test_06(){
         int i=0;
         int j=0;
