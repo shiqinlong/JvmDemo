@@ -1,5 +1,10 @@
 package com.shiqla.jvmdemo.chatper08_juc;
 
+import org.junit.Test;
+
+import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -10,6 +15,26 @@ import java.util.concurrent.locks.ReentrantLock;
  * Date 2020-07-01
  */
 public class BlockingQueueDemo {
+
+
+
+    @Test
+    public void test_01(){
+
+        final BlockingQueue<String> queue = new ArrayBlockingQueue<String>(1);
+
+        new Thread(()->{
+            System.out.println(Thread.currentThread().getName() + "增加货物 1");
+            try {
+                ((ArrayBlockingQueue<String>) queue).put("a");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        },"aa").start();
+
+    }
+
 
     public static void main(String[] args) {
         final ShareData shareData = new ShareData();
@@ -27,6 +52,8 @@ public class BlockingQueueDemo {
         }, "bb").start();
     }
 }
+
+
 
 class ShareData{
 
@@ -72,5 +99,6 @@ class ShareData{
             lock.unlock();
         }
     }
+
 
 }
