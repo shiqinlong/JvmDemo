@@ -2,7 +2,6 @@ package com.shiqla.jvmdemo.chatper08_juc;
 
 import org.junit.Test;
 
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
