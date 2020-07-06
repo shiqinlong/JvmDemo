@@ -1,0 +1,122 @@
+2020-07-06 22:01:18
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.201-b09 mixed mode):
+
+"Attach Listener" #12 daemon prio=9 os_prio=31 tid=0x00007f9571831000 nid=0x9203 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #11 daemon prio=9 os_prio=31 tid=0x00007f9570061000 nid=0x9503 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread3" #10 daemon prio=9 os_prio=31 tid=0x00007f9572041000 nid=0x9703 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread2" #9 daemon prio=9 os_prio=31 tid=0x00007f9572040800 nid=0x9803 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #8 daemon prio=9 os_prio=31 tid=0x00007f957102e800 nid=0x9903 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #7 daemon prio=9 os_prio=31 tid=0x00007f957481a000 nid=0x9a03 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Ctrl-Break" #6 daemon prio=5 os_prio=31 tid=0x00007f957102d800 nid=0x9c03 runnable [0x000070000d0cc000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	- locked <0x00000007bfd7a798> (a java.io.InputStreamReader)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(BufferedReader.java:324)
+	- locked <0x00000007bfd7a798> (a java.io.InputStreamReader)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:64)
+
+"Signal Dispatcher" #5 daemon prio=9 os_prio=31 tid=0x00007f9571009800 nid=0x5f03 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Surrogate Locker Thread (Concurrent GC)" #4 daemon prio=9 os_prio=31 tid=0x00007f956e81e800 nid=0x5d03 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=31 tid=0x00007f9571813800 nid=0xa603 in Object.wait() [0x000070000ccbd000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000007bff08ed0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x00000007bff08ed0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+"Reference Handler" #2 daemon prio=10 os_prio=31 tid=0x00007f956f808800 nid=0x5603 in Object.wait() [0x000070000cbba000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x00000007bff06bf8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x00000007bff06bf8> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=31 tid=0x00007f957180a000 nid=0x1003 runnable [0x000070000b069000]
+   java.lang.Thread.State: RUNNABLE
+	at com.shiqla.jvmdemo.chatper08_juc.G1GarbageDemo.main(G1GarbageDemo.java:15)
+
+"VM Thread" os_prio=31 tid=0x00007f9574819800 nid=0xa903 runnable 
+
+"Gang worker#0 (Parallel GC Threads)" os_prio=31 tid=0x00007f9570811000 nid=0x1f07 runnable 
+
+"Gang worker#1 (Parallel GC Threads)" os_prio=31 tid=0x00007f957200e800 nid=0x1b03 runnable 
+
+"Gang worker#2 (Parallel GC Threads)" os_prio=31 tid=0x00007f9570811800 nid=0x1e03 runnable 
+
+"Gang worker#3 (Parallel GC Threads)" os_prio=31 tid=0x00007f9570812000 nid=0x2a03 runnable 
+
+"Gang worker#4 (Parallel GC Threads)" os_prio=31 tid=0x00007f9571008800 nid=0x2c03 runnable 
+
+"Gang worker#5 (Parallel GC Threads)" os_prio=31 tid=0x00007f956e809000 nid=0x5303 runnable 
+
+"Gang worker#6 (Parallel GC Threads)" os_prio=31 tid=0x00007f956e80a000 nid=0x2d03 runnable 
+
+"Gang worker#7 (Parallel GC Threads)" os_prio=31 tid=0x00007f9572809800 nid=0x2e03 runnable 
+
+"Gang worker#8 (Parallel GC Threads)" os_prio=31 tid=0x00007f957280a000 nid=0x4f03 runnable 
+
+"Gang worker#9 (Parallel GC Threads)" os_prio=31 tid=0x00007f957200f000 nid=0x4e03 runnable 
+
+"G1 Main Concurrent Mark GC Thread" os_prio=31 tid=0x00007f957000c800 nid=0x3a03 runnable 
+
+"Gang worker#0 (G1 Parallel Marking Threads)" os_prio=31 tid=0x00007f957400a000 nid=0x4003 runnable 
+
+"Gang worker#1 (G1 Parallel Marking Threads)" os_prio=31 tid=0x00007f957000d800 nid=0x3e03 runnable 
+
+"Gang worker#2 (G1 Parallel Marking Threads)" os_prio=31 tid=0x00007f957480a000 nid=0x3d03 runnable 
+
+"G1 Concurrent Refinement Thread#0" os_prio=31 tid=0x00007f9574009000 nid=0x4103 runnable 
+
+"G1 Concurrent Refinement Thread#1" os_prio=31 tid=0x00007f957500a000 nid=0x3803 runnable 
+
+"G1 Concurrent Refinement Thread#2" os_prio=31 tid=0x00007f9575009000 nid=0x3603 runnable 
+
+"G1 Concurrent Refinement Thread#3" os_prio=31 tid=0x00007f9575008800 nid=0x4403 runnable 
+
+"G1 Concurrent Refinement Thread#4" os_prio=31 tid=0x00007f9574809000 nid=0x3503 runnable 
+
+"G1 Concurrent Refinement Thread#5" os_prio=31 tid=0x00007f957280a800 nid=0x3403 runnable 
+
+"G1 Concurrent Refinement Thread#6" os_prio=31 tid=0x00007f957200f800 nid=0x4803 runnable 
+
+"G1 Concurrent Refinement Thread#7" os_prio=31 tid=0x00007f9574808800 nid=0x3303 runnable 
+
+"G1 Concurrent Refinement Thread#8" os_prio=31 tid=0x00007f9574008800 nid=0x3203 runnable 
+
+"G1 Concurrent Refinement Thread#9" os_prio=31 tid=0x00007f956e80a800 nid=0x4b03 runnable 
+
+"G1 Concurrent Refinement Thread#10" os_prio=31 tid=0x00007f9571812800 nid=0x3003 runnable 
+
+"VM Periodic Task Thread" os_prio=31 tid=0x00007f9572054800 nid=0x9303 waiting on condition 
+
+JNI global references: 15
+
